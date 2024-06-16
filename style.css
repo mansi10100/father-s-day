@@ -1,0 +1,71 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.photo-container {
+    width: 200px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container:hover {
+    transform: scale(1.1);
+    /* Adjust the scale factor as needed */
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    color: #fff;
+    font-size: 4em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF5F6D, #FFC371, #FF5F6D, #FFC371);
+    z-index: -1;
+    animation: breathingBackground 10s ease-in-out infinite;
+}
+
+@keyframes breathingBackground {
+
+    0%,
+    100% {
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background-size: 120% 120%;
+    }
+}
